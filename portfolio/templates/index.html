@@ -34,6 +34,14 @@
             </ul>
         </div>
         <div class="listing">
+        {% for artwork in artwork_list %}
+            <div class="item">
+                <img src="{{ MEDIA_URL }}{{ artwork.image }}">
+                <h4>{{ artwork.title }}</h4>
+                <p>{{ artwork.description }}</p>
+            </div>        
+        {% endfor %}
+        <!--
             <div class="item">
                 <img src="bild.jpg" alt="Bilden">
                 <h4>Titeln</h4>
@@ -95,5 +103,6 @@
                 <p>Beskrivningen</p>
             </div>
         </div>
+        -->
     </div>
 {% endblock %}
