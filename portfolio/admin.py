@@ -3,7 +3,7 @@ from pagedown.widgets import AdminPagedownWidget
 from django.db import models
 
 # Register your models here.
-from portfolio.models import Artwork, Tag, Page
+from portfolio.models import Artwork, Tag, Block
 
 class PortfolioAdmin(admin.ModelAdmin):
     formfield_overrides = {
@@ -12,4 +12,4 @@ class PortfolioAdmin(admin.ModelAdmin):
 
 admin.site.register(Artwork, PortfolioAdmin)
 admin.site.register(Tag)
-admin.site.register(Page, PortfolioAdmin)
+admin.site.register(Block, PortfolioAdmin)

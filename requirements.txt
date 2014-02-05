@@ -1,3 +1,5 @@
 django<1.7
 django-pagedown
+django-imagekit
 MySQL-python
+PIL
