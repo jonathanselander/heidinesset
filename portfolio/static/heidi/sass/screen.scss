@@ -40,15 +40,20 @@ p {
         padding: 25px 0;
         /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
         .logo {
+            @include span-columns(4);
+            @include push(4);
+
             margin-bottom: 25px;
-            text-align: center;
+//            text-align: center;
             #logo-img {
-                max-width: 250px;
-                width: auto;
-                cursor: pointer;
+//                max-width: 250px;
+                width: 100%;
+//                cursor: pointer;
             }
         }
         .social-links {
+            @include span-columns(4);
+            @include push(4);
             text-align: center;
             a, img {
                 display: inline;
@@ -68,7 +73,9 @@ p {
                     a {
                         text-decoration: none;
                         color: #000;
-                        font-size: 18px;
+                        font-size: 14px;
+                        letter-spacing: 2px;
+                        text-transform: uppercase;
                         /*font-size: 22px;
                         font-family: 'Fenix', serif;
                         text-shadow: 1px 1px 1px rgba(218, 218, 218, 0.96);*/
