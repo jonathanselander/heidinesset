@@ -25,7 +25,6 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -36,6 +35,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pagedown',
+    'markdown',
+    'django_wysiwyg',
+    'ckeditor',
     'imagekit',
     'portfolio'
 )
@@ -89,3 +91,7 @@ MEDIA_URL = '/media/'
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
+
+CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'uploads')
+DJANGO_WYSIWYG_FLAVOR = "ckeditor"
+
