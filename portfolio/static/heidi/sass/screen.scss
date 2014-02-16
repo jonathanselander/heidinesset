@@ -1,14 +1,16 @@
 // ---------------------------------------------------------------------------
 // Imports
 
+@import "compass";
 @import "base";
+@import "_magnificpopup";
 
 /* -------------------------------------------------------------------------*/
 /* Layout */
 
 .container {
     @include container;
-    @include susy-grid-background;
+    //@include susy-grid-background;
 }
 
 .header {
@@ -51,17 +53,68 @@
         }
     }
     .listing {
-        > div {
+        > div.item {
             @include span-columns(4);
+            margin-bottom: 10px;
+            cursor: pointer;
+            border-radius: 100%;
+            position: relative;
+            overflow: hidden;
             
             &:nth-child(3n) {
                 @include omega;
             }
             
+            .background, h4 {
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                width: 100%;            
+                padding: 20px 0;
+                height: 20px;
+                transition: bottom 0.2s;
+                bottom: -60px; /* - (height + padding-top + padding-bottom) */
+            }
+            
+            .background {
+                background: #aaa;
+                opacity: 0.7;
+                z-index: 0;
+            }
+            
+            h4 {
+                color: #fff;
+                text-shadow: 1px 1px 1px #000;
+                font-size: 20px;
+                z-index: 1;
+            }
+            
+            &:hover {
+                .background, h4 {
+                    bottom: 0;
+                }            
+                img {
+                    border-width: 10px;                
+                }
+            }
+            
             img {
                 width: 100%;
                 box-sizing: border-box;
+                border-radius: 100%;
+                border: 1px solid #eee;
+                transition: padding 0.1s, border 0.1s;
+                padding: 2px;
             }
         }
     }
+}
+
+.white-popup {
+    position: relative;
+    background: #FFF;
+    padding: 20px;
+    width: auto;
+    max-width: 500px;
+    margin: 20px auto;
 }
