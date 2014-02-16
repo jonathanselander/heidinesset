@@ -20,6 +20,17 @@ $(document).ready(function () {
 			duration: 200 // don't forget to change the duration also in CSS
 		}
     });
+
+    $('#contact').delegate('input,textarea', 'focus', function () {
+        if ($(this).attr('type') !== 'submit' && this.value === this.defaultValue) {
+            this.value = '';
+        }
+    });
+    $('#contact').delegate('input,textarea', 'blur', function () {
+        if ($(this).attr('type') !== 'submit' && this.value === '') {
+            this.value = this.defaultValue;
+        }
+    });
 });
 
 $('#logo-img').click(function () {

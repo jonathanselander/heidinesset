@@ -9,7 +9,23 @@
 /* Layout */
 
 body {
-    background: url(../../images/background.jpg) no-repeat -550px -300px;
+    background: url(../../images/background.jpg) no-repeat -450px -300px;
+    font-family: 'Lucida Grande';
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+p {
+    line-height: 1.4em;
+}
+
+.separator {
+    border: 0;
+    background: url(../../images/avskiljare.png) no-repeat bottom center;
+    height: 85px;
 }
 
 .container {
@@ -22,8 +38,7 @@ body {
     .top {
         @include span-columns($total-columns);
         padding: 25px 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-        margin-bottom: 25px;
+        /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
         .logo {
             margin-bottom: 25px;
             text-align: center;
@@ -39,7 +54,7 @@ body {
                 display: inline;
             }
             a {
-            padding: 0 6px;
+                padding: 0 6px;
             }
         }
         .topmenu {
@@ -72,8 +87,54 @@ body {
     }
 }
 
+.contact {
+    .textblock {
+        margin-bottom: 25px;
+    }
+    label {
+        display: none;
+    }
+    input, textarea {
+        border:1px solid #aaa;
+        padding:20px;
+        font-size:12px;
+        line-height:12px;
+        font-weight:normal;
+        letter-spacing:3px;
+        text-transform:uppercase;
+        color:#000;
+        background:#fff;
+        -webkit-transition: border 0.2s ease-out;
+        -moz-transition: border 0.2s ease-out;
+        -o-transition: border 0.2s ease-out;
+        -ms-transition: border 0.2s ease-out;
+        transition: border 0.2s ease-out;
+    }
+    .left {
+        float: left;
+        input {
+            display:block;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+    }
+    .right {
+        float: right;
+        textarea {
+            height: 150px;
+        }
+    }
+    .buttons {
+        clear: both;
+        input {
+            float: right;
+        }
+    }
+}
+
 .work {
     @include span-columns($total-columns);
+
     .filters {
         margin-top: 20px;
         margin-bottom: 20px;
@@ -145,8 +206,14 @@ body {
 .white-popup {
     position: relative;
     background: #FFF;
+    overflow: hidden;
     padding: 20px;
     width: auto;
-    max-width: 500px;
+    max-width: 700px;
     margin: 20px auto;
+}
+
+.bottom {
+    text-align: center;
+    padding-bottom: 150px;
 }

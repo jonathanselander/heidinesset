@@ -1,8 +1,10 @@
 django<1.7
-#django-pagedown
+django-pagedown
 #django-markdown
-django-wysiwyg
-django-ckeditor
+django-markdown-deux
+django-recaptcha
+#django-wysiwyg
+#django-ckeditor
 django-imagekit
 MySQL-python
 PIL

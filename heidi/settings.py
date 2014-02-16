@@ -35,10 +35,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pagedown',
-    'markdown',
-    'django_wysiwyg',
-    'ckeditor',
+    'markdown2',
+    'markdown_deux',
     'imagekit',
+    'captcha',
     'portfolio'
 )
 
@@ -92,6 +92,5 @@ MEDIA_URL = '/media/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
 
-CKEDITOR_UPLOAD_PATH = os.path.join(BASE_DIR, 'uploads')
-DJANGO_WYSIWYG_FLAVOR = "ckeditor"
-
+RECAPTCHA_PUBLIC_KEY = "6Ldhre4SAAAAAAbpBJjmRi0zD1HcF6vyV-pGA1Gu"
+RECAPTCHA_PRIVATE_KEY = "6Ldhre4SAAAAANVeHWhzGVD27qhXU9v4yKxFuR8t"

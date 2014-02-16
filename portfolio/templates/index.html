@@ -1,16 +1,18 @@
 {% extends "base.html" %}
 {% load staticfiles %}
+{% load markdown_deux_tags %}
 
 {% block content %}
+<div class="container main">
     <header class="header">
         <div class="top">
             <nav class="topmenu">
                 <ul>
                     <li>
-                        <a class="open-popup-link" href="#about">Om mig</a>
+                        <a class="open-popup-link" href="#contact">Kontakta</a>
                     </li>
                     <li>
-                        <a class="open-popup-link" href="#contact">Kontakta</a>
+                        <a class="open-popup-link" href="#about">Om mig</a>
                     </li>
                 </ul>
             </nav>
@@ -25,12 +27,35 @@
             </div>
         </div>
     </header>
-    <div class="about white-popup mfp-hide" id="about">
-        {{ about_block.content }}
+</div>
+
+<div class="separator">&nbsp;</div>
+
+<div class="about white-popup mfp-hide" id="about">
+    {{ about_block.content|markdown }}
+</div>
+<div class="contact white-popup mfp-hide" id="contact">
+    {% if contact_block and contact_block.content and contact_block.content.strip %}
+    <div class="textblock">
+        {{ contact_block.content|markdown }}
     </div>
-    <div class="contact white-popup mfp-hide" id="contact">
-        {{ contact_block.content }}
-    </div>
+    {% endif %}
+    <form action="" method="post">{% csrf_token %}
+        <div class="left">
+            <input id="id_subject" maxlength="100" name="subject" type="text" value="Ditt namn">
+            <input id="id_sender" name="sender" type="email" value="din@epostadress.se">
+            <input id="id_validation" maxlength="100" name="validation" type="text" value="Antispam: Fyll i mitt efternamn">
+        </div>
+        <div class="right">
+            <textarea cols="40" id="id_message" name="message" rows="10">Meddelande</textarea>
+        </div>
+        <div class="buttons">
+            <input type="submit" value="Skicka">
+        </div>
+    </form>
+</div>
+
+<div class="container">
     <div class="work" id="work">
         <!--
         <div class="filters">
@@ -127,4 +152,16 @@
         {% endfor %}
         </div>
     </div>
+</div>
+
+<div class="separator">&nbsp;</div>
+
+{% if footer_block %}
+<div class="container">
+    <footer class="bottom">
+        {{ footer_block.content|markdown }}
+    </footer>
+</div>
+{% endif %}
+
 {% endblock %}
