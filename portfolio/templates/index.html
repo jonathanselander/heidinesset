@@ -1,32 +1,34 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
     <header class="header">
         <div class="top">
-            <div class="logo">
-                <a href="/"><img src="/assets/images/logo.jpg" alt="Heidi Nesset"></a>
-            </div>
             <nav class="topmenu">
                 <ul>
                     <li>
-                        <a href="">Home</a>
+                        <a class="open-popup-link" href="#about">Om mig</a>
                     </li>
                     <li>
-                        <a href="">Artwork</a>
-                    </li>
-                    <li>
-                        <a class="open-popup-link" href="#contact">Contact</a>
+                        <a class="open-popup-link" href="#contact">Kontakta</a>
                     </li>
                 </ul>
             </nav>
+            <div class="logo">
+                <img id="logo-img" src="{% static 'images/logotyp_heidinesset_bakgrund.png' %}" alt="Heidi Nesset">
+            </div>
+            <div class="social-links">
+                <a href="http://instagram.com/heidinesset" class="instagram"><img src="{% static 'images/social/instagram.png' %}"></a>
+                <a href="https://www.facebook.com/illusbyheidi" class="facebook"><img src="{% static 'images/social/facebook.png' %}"></a>
+                <a href="http://www.pinterest.com/heyaya/" class="pinterest"><img src="{% static 'images/social/pinterest.png' %}"></a>
+                <a href="http://se.linkedin.com/pub/heidi-nesset/57/874/3b1" class="linkedin"><img src="{% static 'images/social/linkedin.png' %}"></a>
+            </div>
         </div>
-        <!--
-        <div class="about">
-            <h1>Välkommen tjoheidi</h1>
-            <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
-        </div>
-        -->
     </header>
+    <div class="about white-popup mfp-hide" id="about">
+        <h1>Välkommen tjoheidi</h1>
+        <p>Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan 1500-talet, när en okänd boksättare tog att antal bokstäver och blandade dem för att göra ett provexemplar av en bok.</p>
+    </div>
     <div class="contact white-popup mfp-hide" id="contact">
         tjaba
     </div>
@@ -43,96 +45,87 @@
         <div class="listing">
         {% for artwork in artwork_list %}
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-                {% if artwork.title and artwork.title.strip %}
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
                     <div class="background">&nbsp;</div>
                     <h4>{{ artwork.title.strip }}</h4>
                 {% endif %}
-            </div>        
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
             <div class="item">
-                <img src="{{ artwork.image_thumbnail.url }}">
-            </div>        
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
+            <div class="item">
+                <a class="open-image-popup" href="{{ artwork.image.url }}">
+                    <img src="{{ artwork.image_thumbnail.url }}">
+                </a>
+                {% if artwork.title and artwork.title.strip and artwork.show_title %}
+                    <div class="background">&nbsp;</div>
+                    <h4>{{ artwork.title.strip }}</h4>
+                {% endif %}
+            </div>
         {% endfor %}
-        <!--
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
-            <div class="item">
-                <img src="bild.jpg" alt="Bilden">
-                <h4>Titeln</h4>
-                <p>Beskrivningen</p>
-            </div>
         </div>
-        -->
     </div>
 {% endblock %}
