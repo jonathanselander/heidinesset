@@ -20,7 +20,7 @@ class Tag(models.Model):
 
 class Artwork(models.Model):
     title = models.CharField(max_length=200)
-    description = models.TextField()
+    description = models.TextField(null=True, blank=True)
     date_created = models.DateField(null=True, blank=True)
     artwork_tags = models.ManyToManyField(Tag)
     show_title = models.BooleanField()
