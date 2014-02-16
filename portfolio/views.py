@@ -1,8 +1,24 @@
+# -*- coding: utf-8 -*-
+
 from django.shortcuts import render
 from portfolio.models import Block, Artwork, Tag
 from portfolio.forms import ContactForm
+from django.core.mail import send_mail
 
 def index(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            validation = request.POST['validation'].strip().lower()
+            if validation == 'nesset' or validation == 'heidi nesset' or validation == 'heidi' or validation == 'heidinesset':
+                message = u'Ämne' + request.POST['subject'] + "\n" \
+                    u'Avsändare:' + request.POST['sender'] + "\n\n" \
+                    'Meddelande:' + "\n" + request.POST['message']
+
+                send_mail(u'Kontaktförfrågan från heidinesset.com', message, 'web@heidinesset.com',
+                    ['heidi@heidinesset.com'], fail_silently=False)
+
+
     try:
         contact_block = Block.objects.get(block_id='contact')
     except:
