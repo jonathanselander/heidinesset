@@ -1,0 +1,70 @@
+/*
+Syntax error: File to import not found or unreadable: settings.
+              Load paths:
+                /Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass
+                /Users/js/.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.0.alpha.17/stylesheets
+                /Users/js/.rvm/gems/ruby-2.1.0/gems/susy-1.0.9/sass
+                Compass::SpriteImporter
+        on line 3 of /Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass/main.scss
+
+1: /Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass/main.scss
+
+Backtrace:
+/Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass/main.scss:3
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/import_node.rb:45:in `import'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:283:in `visit_import'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/stack.rb:79:in `block in with_base'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/stack.rb:115:in `with_frame'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/stack.rb:79:in `with_base'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/tree/root_node.rb:20:in `render'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/sass-3.3.0.rc.3/lib/sass/engine.rb:274:in `render'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:171:in `block (2 levels) in compile'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:153:in `timed'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:166:in `block in compile'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/logger.rb:46:in `red'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:165:in `compile'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:144:in `compile_if_required'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:129:in `block (2 levels) in run'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:127:in `each'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:127:in `block in run'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:153:in `timed'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/compiler.rb:126:in `run'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/compiler.rb:24:in `compile'
+/Users/js/.rvm/rubies/ruby-2.1.0/lib/ruby/2.1.0/forwardable.rb:183:in `compile'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/project_watcher.rb:100:in `sass_added'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/project_watcher.rb:85:in `sass_callback'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/watch.rb:14:in `call'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/watch.rb:14:in `run_callback'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/project_watcher.rb:63:in `block in listen_callback'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/project_watcher.rb:60:in `each'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/compass-1.0.0.alpha.18/lib/compass/watcher/project_watcher.rb:60:in `listen_callback'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `call'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/listener.rb:236:in `on_change'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/listener.rb:271:in `block in initialize_adapter'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `call'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/adapter.rb:244:in `report_changes'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/adapter.rb:313:in `poll_changed_directories'
+/Users/js/.rvm/gems/ruby-2.1.0/gems/listen-1.1.6/lib/listen/adapter.rb:289:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: settings.\A               Load paths:\A                 /Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass\A                 /Users/js/.rvm/gems/ruby-2.1.0/gems/compass-core-1.0.0.alpha.17/stylesheets\A                 /Users/js/.rvm/gems/ruby-2.1.0/gems/susy-1.0.9/sass\A                 Compass::SpriteImporter\A         on line 3 of /Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass/main.scss\A \A 1: /Volumes/Projects/python/heidi/heidi/portfolio/static/heidi/sass/main.scss"; }
