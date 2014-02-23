@@ -11,8 +11,8 @@ def index(request):
         if form.is_valid():
             validation = request.POST['validation'].strip().lower()
             if validation == 'nesset' or validation == 'heidi nesset' or validation == 'heidi' or validation == 'heidinesset':
-                message = u'Ämne' + request.POST['subject'] + "\n" \
-                    u'Avsändare:' + request.POST['sender'] + "\n\n" \
+                message = u'Ämne: ' + request.POST['subject'] + "\n" \
+                    u'Avsändare: ' + request.POST['sender'] + "\n\n" \
                     'Meddelande:' + "\n" + request.POST['message']
 
                 send_mail(u'Kontaktförfrågan från heidinesset.com', message, 'web@heidinesset.com',
