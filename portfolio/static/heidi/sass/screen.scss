@@ -103,7 +103,12 @@ p {
 
 .contact {
     .textblock {
+        margin-top: 20px;
         margin-bottom: 25px;
+    }
+    form {
+        margin-bottom: 20px;
+        overflow: hidden;
     }
     label {
         display: none;
@@ -209,9 +214,9 @@ p {
                 width: 100%;
                 box-sizing: border-box;
                 border-radius: 100%;
-                border: 1px solid #eee;
+                border: 0 solid #000;
                 transition: padding 0.1s, border 0.1s;
-                padding: 2px;
+                /*padding: 2px;*/
             }
         }
     }
@@ -221,7 +226,7 @@ p {
     position: relative;
     background: #FFF;
     overflow: hidden;
-    padding: 20px;
+    padding: 40px 60px;
     width: auto;
     max-width: 700px;
     margin: 20px auto;
