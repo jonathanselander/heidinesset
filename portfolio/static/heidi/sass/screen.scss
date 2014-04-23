@@ -9,7 +9,7 @@
 /* Layout */
 
 body {
-    background: url(../../images/background.jpg) no-repeat -450px -300px;
+    background: #fff;
     font-family: 'Lucida Grande';
 }
 
@@ -37,13 +37,13 @@ p {
     margin-top: 30px;
     .top {
         @include span-columns($total-columns);
-        padding: 25px 0;
+        padding: 25px 0 35px 0;
         /*border-bottom: 1px solid rgba(0, 0, 0, 0.2);*/
         .logo {
             @include span-columns(4);
             @include push(4);
 
-            margin-bottom: 25px;
+            margin-bottom: 35px;
 //            text-align: center;
             #logo-img {
 //                max-width: 250px;
