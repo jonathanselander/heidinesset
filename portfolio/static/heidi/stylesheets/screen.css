@@ -651,7 +651,7 @@ p {
   margin-right: 1.69492%;
   display: inline;
   margin-left: 33.89831%;
-  margin-bottom: 35px;
+  margin-bottom: 40px;
 }
 /* line 48, ../sass/screen.scss */
 .header .top .logo #logo-img {
@@ -778,6 +778,8 @@ p {
   width: 100%;
   float: left;
   margin-right: 1.69492%;
+  margin-top: 10px;
+  margin-bottom: 20px;
   display: inline;
 }
 /* line 157, ../sass/screen.scss */
