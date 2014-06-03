@@ -34,7 +34,7 @@ def index(request):
     except:
         footer_block = None
 
-    artworks = Artwork.objects.all().order_by('sort_order')
+    artworks = Artwork.objects.all().order_by('-sort_order')
     contact_form = ContactForm()
     tags = Tag.objects.all()
     context = {
